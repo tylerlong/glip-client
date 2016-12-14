@@ -4,9 +4,21 @@
   "description": "Simple Glip client implementation",
   "main": "index.js",
   "repository": "git@github.com:tylerlong/glip-client.git",
-  "author": "Tyler Long <tyler4long@gmail.com>",
+  "author": "Tyler Long <tyler4long@gmail.com> (https://github.com/tylerlong)",
   "license": "MIT",
   "dependencies": {
     "ringcentral": "^3.0.0-rc3"
-  }
+  },
+  "files": [
+    "index.js",
+    "package.json",
+    "README.md",
+    "yarn.lock"
+  ],
+  "keywords": [
+    "Glip",
+    "RingCentral"
+  ],
+  "homepage": "https://github.com/tylerlong/glip-client",
+  "bugs": "https://github.com/tylerlong/glip-client/issues"
 }
