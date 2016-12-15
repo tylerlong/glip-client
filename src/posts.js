@@ -3,8 +3,8 @@ class Posts {
     this.rc = rc;
   }
 
-  post(groupId, text) {
-    return this.rc.platform().post('/glip/posts', { groupId, text });
+  post(options) {
+    return this.rc.platform().post('/glip/posts', options);
   }
 
   subscribe(callback) {
