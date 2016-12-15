@@ -8,7 +8,7 @@ class Posts {
   }
 
   subscribe(callback) {
-    this.subscription = this.rc.createSubscription('https://platform.ringcentral.com/restapi/v1.0/subscription');
+    this.subscription = this.rc.createSubscription();
     this.subscription.on(this.subscription.events.notification, function (msg) {
       callback(msg.body.post);
     });
