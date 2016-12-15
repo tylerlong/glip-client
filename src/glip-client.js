@@ -7,7 +7,7 @@ class GlipClient {
     this.rc = new RingCentral(options);
   }
 
-  login(options) {
+  authorize(options) {
     return this.rc.platform().login(options);
   }
 

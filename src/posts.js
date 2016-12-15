@@ -3,11 +3,11 @@ class Posts {
     this.rc = rc;
   }
 
-  create(groupId, text) {
+  post(groupId, text) {
     return this.rc.platform().post('/glip/posts', { groupId, text });
   }
 
-  listen(callback) {
+  subscribe(callback) {
     this.subscription = this.rc.createSubscription('https://platform.ringcentral.com/restapi/v1.0/subscription');
     this.subscription.on(this.subscription.events.notification, function (msg) {
       callback(msg.body.post);
