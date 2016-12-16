@@ -16,15 +16,16 @@ gc.authorize({
 }).then((response) => {
   console.log('logged in');
 
-  gc.posts().subscribe((message) => { // receive messages
-    if (message.messageType == 'PostAdded') {
-      const post = message.post;
-      console.log(post);
-      if (post.text == 'ping') {
-        gc.posts().post({ groupId: post.groupId, text: 'pong' }).then((response) => { // send message
+  gc.posts().subscribe((message) => {
+    if (message.messageType == 'PostAdded') { // receive new messages
+      console.log(message);
+      if (message.post.text == 'ping') {
+        gc.posts().post({ groupId: message.post.groupId, text: 'pong' }).then((response) => { // send message
           console.log(response);
         });
       }
+    } else { // other message events, such as PostChanged and PostRemoved
+      console.log(message);
     }
   });
 
