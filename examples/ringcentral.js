@@ -21,22 +21,19 @@ platform.login({
   password: process.env.PASSWORD,
 }).then((response) => {
   const subscription = rcsdk.createSubscription();
-  subscription.on(subscription.events.notification, (msg) => {
-    console.log(JSON.stringify(msg));
+  subscription.on(subscription.events.notification, (notification) => {
+    console.log(notification);
   });
   subscription
     .setEventFilters([
       '/restapi/v1.0/account/~/extension/~/glip/groups',
       '/restapi/v1.0/account/~/extension/~/glip/posts'
     ])
-    .register()
-    .then((resp) => {
-      // console.log(resp);
-    });
+    .register();
 }).then((response) => {
   platform.post('/glip/posts', { groupId: '19620831234', text: 'hello world from the bot' }).catch((err) => {
-    console.log(err);
+    console.err(err);
   });
-}).catch((e) => {
-  console.error('Error ' + e.stack);
+}).catch((err) => {
+  console.error(err);
 });

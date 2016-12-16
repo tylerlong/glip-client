@@ -19,7 +19,7 @@ gc.authorize({
   gc.posts().subscribe((message) => { // receive messages
     if (message.messageType == 'PostAdded') {
       const post = message.post;
-      console.log('Post added: ' + post.text);
+      console.log(post);
       if (post.text == 'ping') {
         gc.posts().post({ groupId: post.groupId, text: 'pong' }).then((response) => { // send message
           console.log(response);
