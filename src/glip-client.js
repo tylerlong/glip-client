@@ -1,5 +1,6 @@
 const RingCentral = require('ringcentral');
 const Posts = require('./posts');
+const Groups = require('./groups');
 
 
 class GlipClient {
@@ -16,6 +17,13 @@ class GlipClient {
       this._posts = new Posts(this.rc);
     }
     return this._posts;
+  }
+
+  groups() {
+    if (!this._groups) {
+      this._groups = new Groups(this.rc);
+    }
+    return this._groups;
   }
 }
 
