@@ -7,6 +7,7 @@ This is a simple Glip client implementation. It currently supports the following
 - monitor message modification and removal in real time
 - get message(s)
 - get group(s)/team(s)
+- monitor group events
 - get person
 - get company
 
@@ -34,4 +35,3 @@ Please check the [examples](examples).
 - provide build version for browser
 - provide build version for ancient node versions which doesn't support ES6
 - support batch operations
-- support group notifications

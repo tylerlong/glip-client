@@ -31,4 +31,8 @@ gc.authorize({
   gc.groups().get({ groupId: 19203244034 }).then((response) => { // get group/team by id
     console.log(response);
   });
+
+  gc.groups().subscribe((message) => { // monitor group events, such as GroupAdded, GroupChanged and GroupRemoved
+    console.log(message);
+  })
 });

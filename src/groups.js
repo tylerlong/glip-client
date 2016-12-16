@@ -10,6 +10,14 @@ class Groups {
       return this.rc.platform().get('/glip/groups', options).then((response) => response.json());
     }
   }
+
+  subscribe(callback) {
+    this.subscription = this.rc.createSubscription();
+    this.subscription.on(this.subscription.events.notification, (notification) => {
+      callback(notification.body);
+    });
+    this.subscription.setEventFilters(['/restapi/v1.0/account/~/extension/~/glip/groups']).register();
+  }
 }
 
 
