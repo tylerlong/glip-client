@@ -16,7 +16,7 @@ gc.authorize({
 }).then((response) => {
   console.log('logged in');
 
-  gc.persons().get({ personId: '129508020' }).then((response) => { // get person by id
+  gc.persons().get({ personId: '~' }).then((response) => { // get person by id
     console.log(response);
   });
 });
