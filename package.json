@@ -21,5 +21,8 @@
     "RingCentral"
   ],
   "homepage": "https://github.com/tylerlong/glip-client",
-  "bugs": "https://github.com/tylerlong/glip-client/issues"
+  "bugs": "https://github.com/tylerlong/glip-client/issues",
+  "devDependencies": {
+    "dotenv": "^2.0.0"
+  }
 }
