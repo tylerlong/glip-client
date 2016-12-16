@@ -34,8 +34,9 @@ npm install --save glip-client
 Please check the [examples](examples).
 
 
-## todo
+## Todo
 
 - provide build version for browser
 - provide build version for ancient node versions which doesn't support ES6
 - support batch operations
+    - postpone, maybe multipart/mixed will be replaced with JSON array.
