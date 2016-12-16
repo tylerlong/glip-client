@@ -13,22 +13,22 @@ gc.authorize({
   username: process.env.USERNAME,
   extension: '',
   password: process.env.PASSWORD,
-}).then(function (response) {
+}).then((response) => {
   console.log('logged in');
 
-  gc.groups().get().then(function (response) { // get groups and teams
+  gc.groups().get().then((response) => { // get groups and teams
     console.log(`${response.records.length} groups/teams were found.`);
   });
 
-  gc.groups().get({ type: 'Group' }).then(function (response) { // get groups
+  gc.groups().get({ type: 'Group' }).then((response) => { // get groups
     console.log(`${response.records.length} groups were found.`);
   });
 
-  gc.groups().get({ type: 'Team' }).then(function (response) { // get teams
+  gc.groups().get({ type: 'Team' }).then((response) => { // get teams
     console.log(`${response.records.length} teams were found.`);
   });
 
-  gc.groups().get({ groupId: 19203244034 }).then(function (response) { // get group/team by id
+  gc.groups().get({ groupId: 19203244034 }).then((response) => { // get group/team by id
     console.log(response);
   });
 });

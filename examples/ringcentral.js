@@ -19,9 +19,9 @@ platform.login({
   username: process.env.USERNAME,
   extension: '',
   password: process.env.PASSWORD,
-}).then(function (response) {
+}).then((response) => {
   const subscription = rcsdk.createSubscription();
-  subscription.on(subscription.events.notification, function (msg) {
+  subscription.on(subscription.events.notification, (msg) => {
     console.log(JSON.stringify(msg));
   });
   subscription
@@ -30,13 +30,13 @@ platform.login({
       '/restapi/v1.0/account/~/extension/~/glip/posts'
     ])
     .register()
-    .then(function (resp) {
+    .then((resp) => {
       // console.log(resp);
     });
-}).then(function (response) {
-  platform.post('/glip/posts', { groupId: '19620831234', text: 'hello world from the bot' }).catch(function (err) {
+}).then((response) => {
+  platform.post('/glip/posts', { groupId: '19620831234', text: 'hello world from the bot' }).catch((err) => {
     console.log(err);
   });
-}).catch(function (e) {
+}).catch((e) => {
   console.error('Error ' + e.stack);
 });
