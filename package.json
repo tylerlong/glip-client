@@ -1,6 +1,6 @@
 {
   "name": "glip-client",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Simple Glip client implementation",
   "main": "index.js",
   "repository": "git@github.com:tylerlong/glip-client.git",
@@ -13,7 +13,8 @@
     "index.js",
     "package.json",
     "README.md",
-    "yarn.lock"
+    "yarn.lock",
+    "src/*.js"
   ],
   "keywords": [
     "Glip",
