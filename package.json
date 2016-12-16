@@ -1,21 +1,22 @@
 {
   "name": "glip-client",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Simple Glip client implementation",
-  "main": "index.js",
+  "main": "index.bundle.js",
   "repository": "git@github.com:tylerlong/glip-client.git",
   "author": "Tyler Long <tyler4long@gmail.com> (https://github.com/tylerlong)",
   "license": "MIT",
+  "scripts": {
+    "build": "webpack --progress --colors"
+  },
   "dependencies": {
     "ringcentral": "^3.0.0-rc3"
   },
   "files": [
-    "index.js",
+    "index.bundle.js",
     "package.json",
     "README.md",
-    "yarn.lock",
-    "src/*.js",
-    "examples/*.js"
+    "yarn.lock"
   ],
   "keywords": [
     "Glip",
@@ -24,6 +25,12 @@
   "homepage": "https://github.com/tylerlong/glip-client",
   "bugs": "https://github.com/tylerlong/glip-client/issues",
   "devDependencies": {
-    "dotenv": "^2.0.0"
+    "babel-core": "^6.20.0",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "dotenv": "^2.0.0",
+    "json-loader": "^0.5.4",
+    "webpack": "^1.14.0"
   }
 }
