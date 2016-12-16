@@ -2,17 +2,17 @@
 
 This is a simple Glip client implementation. It currently supports the following features:
 
-- [posts](blob/master/examples/posts.js)
+- [posts](examples/posts.js)
     - send message
     - receive messages in real time
     - monitor message modification and removal in real time
     - get message(s)
-- [groups](blob/master/examples/groups.js)
+- [groups](examples/groups.js)
     - get group(s)/team(s)
     - monitor group events
-- [persons](blob/master/examples/persons.js)
+- [persons](examples/persons.js)
     - get person
-- [companies](blob/master/examples/companies.js)
+- [companies](examples/companies.js)
     - get company
 
 
