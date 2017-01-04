@@ -1,5 +1,5 @@
 require('dotenv').config();
-const GlipClient = require('../index');
+const GlipClient = require('../src/glip-client');
 
 
 const gc = new GlipClient({
