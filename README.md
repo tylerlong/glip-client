@@ -16,6 +16,11 @@ This is a simple Glip client implementation. It currently supports the following
     - get company
 
 
+## Requirement
+
+Node.js 4.2 as a mimimum.
+
+
 ## Installation
 
 ```
