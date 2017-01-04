@@ -1,11 +1,9 @@
-const webpack = require('webpack');
-const uglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
-
+const path = require('path')
 
 module.exports = {
-  entry: "./index.js",
+  entry: "./src/glip-client.js",
   output: {
-    path: __dirname,
+    path: path.join(__dirname, 'src'),
     filename: "index.bundle.js",
     libraryTarget: 'commonjs2',
   },
@@ -13,24 +11,23 @@ module.exports = {
     loaders: [
       {
         test: /\.json$/,
-        loader: 'json-loader',
+        loader: 'json-loader'
       },
       {
         test: /\.js$/,
         loader: 'babel-loader',
         exclude: /node_modules/,
         query: {
-          presets: ['es2015', 'stage-0'],
-        },
-      },
+          presets: [
+            ['env', {
+              'targets': {
+                'node': 4.2
+              }
+            }]
+          ]
+        }
+      }
     ],
   },
-  plugins: [
-    new uglifyJsPlugin({
-      compress: {
-        warnings: false,
-      },
-    }),
-  ],
   target: 'node',
 };

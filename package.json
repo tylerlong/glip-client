@@ -1,8 +1,8 @@
 {
   "name": "glip-client",
-  "version": "0.3.3",
+  "version": "0.4.0",
   "description": "Simple Glip client implementation",
-  "main": "index.bundle.js",
+  "main": "src/index.bundle.js",
   "repository": "git@github.com:tylerlong/glip-client.git",
   "author": "Tyler Long <tyler4long@gmail.com> (https://github.com/tylerlong)",
   "license": "MIT",
@@ -14,7 +14,7 @@
     "ringcentral": "^3.0.0"
   },
   "files": [
-    "index.bundle.js",
+    "src/index.bundle.js",
     "package.json",
     "README.md",
     "yarn.lock"
@@ -29,8 +29,6 @@
     "babel-core": "^6.21.0",
     "babel-loader": "^6.2.10",
     "babel-preset-env": "^1.1.4",
-    "babel-preset-es2015": "^6.18.0",
-    "babel-preset-stage-0": "^6.16.0",
     "dotenv": "^2.0.0",
     "json-loader": "^0.5.4",
     "npm-check-updates": "^2.8.9",
