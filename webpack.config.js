@@ -1,11 +1,11 @@
 const path = require('path')
 
 module.exports = {
-  entry: "./src/glip-client.js",
+  entry: './src/glip-client.js',
   output: {
     path: path.join(__dirname, 'src'),
-    filename: "index.bundle.js",
-    libraryTarget: 'commonjs2',
+    filename: 'index.bundle.js',
+    libraryTarget: 'commonjs2'
   },
   module: {
     loaders: [
@@ -27,7 +27,7 @@ module.exports = {
           ]
         }
       }
-    ],
+    ]
   },
-  target: 'node',
-};
+  target: 'node'
+}

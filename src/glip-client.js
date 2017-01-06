@@ -1,47 +1,45 @@
-const RingCentral = require('ringcentral');
-const Posts = require('./posts');
-const Groups = require('./groups');
-const Persons = require('./persons');
-const Companies = require('./companies');
-
+const RingCentral = require('ringcentral')
+const Posts = require('./posts')
+const Groups = require('./groups')
+const Persons = require('./persons')
+const Companies = require('./companies')
 
 class GlipClient {
-  constructor(options) {
-    this.rc = new RingCentral(options);
+  constructor (options) {
+    this.rc = new RingCentral(options)
   }
 
-  authorize(options) {
-    return this.rc.platform().login(options);
+  authorize (options) {
+    return this.rc.platform().login(options)
   }
 
-  posts() {
+  posts () {
     if (!this._posts) {
-      this._posts = new Posts(this.rc);
+      this._posts = new Posts(this.rc)
     }
-    return this._posts;
+    return this._posts
   }
 
-  groups() {
+  groups () {
     if (!this._groups) {
-      this._groups = new Groups(this.rc);
+      this._groups = new Groups(this.rc)
     }
-    return this._groups;
+    return this._groups
   }
 
-  persons() {
+  persons () {
     if (!this._persons) {
-      this._persons = new Persons(this.rc);
+      this._persons = new Persons(this.rc)
     }
-    return this._persons;
+    return this._persons
   }
 
-  companies() {
+  companies () {
     if (!this._companies) {
-      this._companies = new Companies(this.rc);
+      this._companies = new Companies(this.rc)
     }
-    return this._companies;
+    return this._companies
   }
 }
 
-
-module.exports = GlipClient;
+module.exports = GlipClient
