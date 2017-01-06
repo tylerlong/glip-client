@@ -18,7 +18,7 @@ This is a simple Glip client implementation. It currently supports the following
 
 ## Requirement
 
-Node.js 4.2 as a mimimum.
+Node.js 4.2 as mimimum.
 
 
 ## Installation
