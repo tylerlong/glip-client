@@ -5,7 +5,7 @@ require('dotenv').config()
 const RCSDK = require('ringcentral')
 
 const rcsdk = new RCSDK({
-  server: 'https://platform.ringcentral.com',
+  server: process.env.SERVER,
   appKey: process.env.APP_KEY,
   appSecret: process.env.APP_SECRET,
   appName: 'My Glip Client',
@@ -16,7 +16,7 @@ const platform = rcsdk.platform()
 
 platform.login({
   username: process.env.USERNAME,
-  extension: '',
+  extension: process.env.EXTENSION,
   password: process.env.PASSWORD
 }).then((response) => {
   const subscription = rcsdk.createSubscription()
