@@ -28,11 +28,11 @@ gc.authorize({
     }
   })
 
-  gc.posts().get({ groupId: 19620831234 }).then((response) => { // get messages by group id
+  gc.posts().get({ groupId: process.env.GROUP }).then((response) => { // get messages by group id
     console.log(`${response.records.length} posts were found.`)
   })
 
-  gc.posts().get({ postId: 1227593072644 }).then((response) => { // get message by id
+  gc.posts().get({ postId: process.env.POST }).then((response) => { // get message by id
     console.log(response)
   })
 })

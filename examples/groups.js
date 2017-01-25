@@ -27,7 +27,7 @@ gc.authorize({
     console.log(`${response.records.length} teams were found.`)
   })
 
-  gc.groups().get({ groupId: 19203244034 }).then((response) => { // get group/team by id
+  gc.groups().get({ groupId: process.env.GROUP }).then((response) => { // get group/team by id
     console.log(response)
   })
 

@@ -15,7 +15,7 @@ gc.authorize({
 }).then((response) => {
   console.log('logged in')
 
-  gc.companies().get({ companyId: 129508020 }).then((response) => { // get company by id
+  gc.companies().get({ companyId: process.env.COMPANY }).then((response) => { // get company by id
     console.log(response)
   })
 })

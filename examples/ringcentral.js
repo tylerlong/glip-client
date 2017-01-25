@@ -30,7 +30,7 @@ platform.login({
     ])
     .register()
 }).then((response) => {
-  platform.post('/glip/posts', { groupId: '19620831234', text: 'hello world from the bot' }).catch((err) => {
+  platform.post('/glip/posts', { groupId: process.env.GROUP, text: 'hello world from the bot' }).catch((err) => {
     console.err(err)
   })
 }).catch((err) => {
