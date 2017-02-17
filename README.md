@@ -82,6 +82,13 @@ gc.authorize({
 ```
 
 
+## Login Glip to test
+
+For sandbox, please login https://glip.devtest.ringcentral.com/
+
+For production, please login https://app.glip.com/
+
+
 ## Todo
 
 - support batch operations
