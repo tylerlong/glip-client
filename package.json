@@ -11,7 +11,7 @@
     "upgrade": "ncu -ua && yarn upgrade"
   },
   "dependencies": {
-    "ringcentral": "^3.0.0"
+    "ringcentral": "^3.1.1"
   },
   "files": [
     "src/index.bundle.js",
@@ -26,13 +26,13 @@
   "homepage": "https://github.com/tylerlong/glip-client",
   "bugs": "https://github.com/tylerlong/glip-client/issues",
   "devDependencies": {
-    "babel-core": "^6.22.1",
-    "babel-loader": "^6.2.10",
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.3.2",
     "babel-preset-env": "^1.1.8",
     "dotenv": "^4.0.0",
     "json-loader": "^0.5.4",
-    "npm-check-updates": "^2.8.9",
+    "npm-check-updates": "^2.10.2",
     "standard": "^8.6.0",
-    "webpack": "^1.14.0"
+    "webpack": "^2.2.1"
   }
 }
