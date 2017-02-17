@@ -1,6 +1,6 @@
 {
   "name": "glip-client",
-  "version": "0.4.5",
+  "version": "0.4.6",
   "description": "Simple Glip client implementation",
   "main": "src/index.bundle.js",
   "repository": "git@github.com:tylerlong/glip-client.git",
@@ -32,6 +32,7 @@
     "dotenv": "^4.0.0",
     "npm-check-updates": "^2.10.2",
     "standard": "^8.6.0",
-    "webpack": "^2.2.1"
+    "webpack": "^2.2.1",
+    "webpack-node-externals": "^1.5.4"
   }
 }
