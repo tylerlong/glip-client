@@ -27,19 +27,34 @@ gc.authorize({
     console.log(`${response.records.length} teams were found.`)
   })
 
-  gc.groups().get({ groupId: 19203244034 }).then((response) => { // get group/team by id
+  gc.groups().get({ groupId: 125976582 }).then((response) => { // get group/team by id
     console.log(response)
   })
 
   gc.groups().post({
     type : "Team",
     isPublic: true,
-    name: "Pawan GlipClient Test",
+    name: "Pawan GlipClient Test2",
     description: "Team to test glip client",
     members: ["pkvenu@gmail.com", "glipbots@gmail.com", ]
   }).then((response) => {
     console.log(response);
     });
+
+  gc.groups().post({
+    groupId: 125976582,
+    addedPersonEmails: ["john.wang2@ringcentral.com", ],
+    addedPersonIds: []
+  }).then((response) => {
+    console.log(response);
+  });
+
+  gc.groups().post({
+    groupId: 125976582,
+    removedPersonIds : ["glip-638386179"],
+  }).then((response) => {
+    console.log(response);
+  });
 
   gc.posts().post({ groupId: message.post.groupId, text: 'pong' }).then((response) => { // send message
     console.log(response)
