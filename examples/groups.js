@@ -2,7 +2,7 @@ require('dotenv').config()
 const GlipClient = require('../src/glip-client')
 
 const gc = new GlipClient({
-  server: 'https://platform.ringcentral.com',
+  server: process.env.APP_SERVER_URL,
   appKey: process.env.APP_KEY,
   appSecret: process.env.APP_SECRET,
   appName: 'My Glip Client',
@@ -28,6 +28,20 @@ gc.authorize({
   })
 
   gc.groups().get({ groupId: 19203244034 }).then((response) => { // get group/team by id
+    console.log(response)
+  })
+
+  gc.groups().post({
+    type : "Team",
+    isPublic: true,
+    name: "Pawan GlipClient Test",
+    description: "Team to test glip client",
+    members: ["pkvenu@gmail.com", "glipbots@gmail.com", ]
+  }).then((response) => {
+    console.log(response);
+    });
+
+  gc.posts().post({ groupId: message.post.groupId, text: 'pong' }).then((response) => { // send message
     console.log(response)
   })
 
