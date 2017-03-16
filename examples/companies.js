@@ -2,7 +2,7 @@ require('dotenv').config()
 const GlipClient = require('../src/glip-client')
 
 const gc = new GlipClient({
-  server: 'https://platform.ringcentral.com',
+  server: process.env.SERVER,
   appKey: process.env.APP_KEY,
   appSecret: process.env.APP_SECRET,
   appName: 'My Glip Client',
@@ -10,12 +10,12 @@ const gc = new GlipClient({
 })
 gc.authorize({
   username: process.env.USERNAME,
-  extension: '',
+  extension: process.env.EXTENSION,
   password: process.env.PASSWORD
 }).then((response) => {
   console.log('logged in')
 
-  gc.companies().get({ companyId: 129508020 }).then((response) => { // get company by id
+  gc.companies().get({ companyId: '~' }).then((response) => { // get company by id
     console.log(response)
   })
 })

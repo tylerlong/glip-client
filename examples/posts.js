@@ -2,7 +2,7 @@ require('dotenv').config()
 const GlipClient = require('../src/glip-client')
 
 const gc = new GlipClient({
-  server: 'https://platform.ringcentral.com',
+  server: process.env.SERVER,
   appKey: process.env.APP_KEY,
   appSecret: process.env.APP_SECRET,
   appName: 'My Glip Client',
@@ -10,7 +10,7 @@ const gc = new GlipClient({
 })
 gc.authorize({
   username: process.env.USERNAME,
-  extension: '',
+  extension: process.env.EXTENSION,
   password: process.env.PASSWORD
 }).then((response) => {
   console.log('logged in')
@@ -28,11 +28,11 @@ gc.authorize({
     }
   })
 
-  gc.posts().get({ groupId: 19620831234 }).then((response) => { // get messages by group id
+  gc.posts().get({ groupId: process.env.GROUP }).then((response) => { // get messages by group id
     console.log(`${response.records.length} posts were found.`)
   })
 
-  gc.posts().get({ postId: 1227593072644 }).then((response) => { // get message by id
+  gc.posts().get({ postId: process.env.POST }).then((response) => { // get message by id
     console.log(response)
   })
 })

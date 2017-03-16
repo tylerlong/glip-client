@@ -2,7 +2,7 @@ require('dotenv').config()
 const GlipClient = require('../src/glip-client')
 
 const gc = new GlipClient({
-  server: process.env.APP_SERVER_URL,
+  server: process.env.SERVER,
   appKey: process.env.APP_KEY,
   appSecret: process.env.APP_SECRET,
   appName: 'My Glip Client',
@@ -10,7 +10,7 @@ const gc = new GlipClient({
 })
 gc.authorize({
   username: process.env.USERNAME,
-  extension: '',
+  extension: process.env.EXTENSION,
   password: process.env.PASSWORD
 }).then((response) => {
   console.log('logged in')
@@ -27,7 +27,7 @@ gc.authorize({
     console.log(`${response.records.length} teams were found.`)
   })
 
-  gc.groups().get({ groupId: 125976582 }).then((response) => { // get group/team by id
+  gc.groups().get({ groupId: process.env.GROUP }).then((response) => { // get group/team by id
     console.log(response)
   })
 

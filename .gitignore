@@ -1,3 +1,5 @@
 node_modules/
 .env
+.env.production
+.env.sandbox
 *.bundle.js

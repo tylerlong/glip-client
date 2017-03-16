@@ -1,33 +1,35 @@
-const path = require('path')
+const nodeExternals = require('webpack-node-externals')
 
-module.exports = {
-  entry: './src/glip-client.js',
+const config = {
+  target: 'node',
+  externals: [nodeExternals()],
+  entry: {
+    'index': './src/glip-client.js'
+  },
   output: {
-    path: path.join(__dirname, 'src'),
-    filename: 'index.bundle.js',
+    path: './src',
+    filename: '[name].bundle.js',
     libraryTarget: 'commonjs2'
   },
   module: {
-    loaders: [
-      {
-        test: /\.json$/,
-        loader: 'json-loader'
-      },
+    rules: [
       {
         test: /\.js$/,
-        loader: 'babel-loader',
-        exclude: /node_modules/,
-        query: {
-          presets: [
-            ['env', {
-              'targets': {
-                'node': 4.2
-              }
-            }]
-          ]
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              ['env', {
+                'targets': {
+                  'node': 4.2
+                }
+              }]
+            ]
+          }
         }
       }
     ]
-  },
-  target: 'node'
+  }
 }
+
+export default [config]
