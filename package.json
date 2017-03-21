@@ -1,6 +1,6 @@
 {
   "name": "glip-client",
-  "version": "0.4.6",
+  "version": "0.4.7",
   "description": "Simple Glip client implementation",
   "main": "src/index.bundle.js",
   "repository": "git@github.com:tylerlong/glip-client.git",
@@ -26,12 +26,12 @@
   "homepage": "https://github.com/tylerlong/glip-client",
   "bugs": "https://github.com/tylerlong/glip-client/issues",
   "devDependencies": {
-    "babel-core": "^6.23.1",
-    "babel-loader": "^6.3.2",
-    "babel-preset-env": "^1.1.8",
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.1",
+    "babel-preset-env": "^1.2.2",
     "dotenv": "^4.0.0",
-    "npm-check-updates": "^2.10.2",
-    "standard": "^8.6.0",
+    "npm-check-updates": "^2.10.3",
+    "standard": "^9.0.2",
     "webpack": "^2.2.1",
     "webpack-node-externals": "^1.5.4"
   }

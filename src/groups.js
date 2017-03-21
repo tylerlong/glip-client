@@ -19,6 +19,10 @@ class Groups {
     }
   }
 
+  put (options) {
+    return this.rc.platform().put('/glip/groups', options).then((response) => response.json())
+  }
+
   subscribe (callback) {
     this.subscription = this.rc.createSubscription()
     this.subscription.on(this.subscription.events.notification, (notification) => {

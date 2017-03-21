@@ -93,3 +93,5 @@ For production, please login https://app.glip.com/
 
 - support batch operations
     - postpone, maybe multipart/mixed will be replaced with JSON array.
+- Write real unit testing
+- Setup Travis CI and Coveralls
