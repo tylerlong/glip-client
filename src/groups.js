@@ -11,10 +11,10 @@ class Groups {
     }
   }
 
-  post(options){
-    if(options && options.groupId){
+  post (options) {
+    if (options && options.groupId) {
       return this.rc.platform().post(`/glip/groups/${options.groupId}/bulk-assign`, options).then((response) => response.json())
-    }else {
+    } else {
       return this.rc.platform().post('/glip/groups', options).then((response) => response.json())
     }
   }
