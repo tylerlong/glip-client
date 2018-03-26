@@ -2,17 +2,17 @@
 
 This is a simple Glip client implementation. It currently supports the following features:
 
-- [posts](examples/posts.js)
+- [posts](test/posts.js)
     - send message
     - receive messages in real time
     - monitor message modification and removal in real time
     - get message(s)
-- [groups](examples/groups.js)
+- [groups](test/groups.js)
     - get group(s)/team(s)
     - monitor group events
-- [persons](examples/persons.js)
+- [persons](test/persons.js)
     - get person
-- [companies](examples/companies.js)
+- [companies](test/companies.js)
     - get company
 
 
@@ -36,7 +36,7 @@ npm install --save glip-client
 
 ## Usage
 
-Please check the [examples](examples).
+Please check the [test](examples).
 
 Here is a code snippet to help you to get started quickly:
 
