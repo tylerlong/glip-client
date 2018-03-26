@@ -1,5 +1,9 @@
 # Glip Client
 
+## Deprecation warning
+
+This project has been deprecated. You should use the [official RingCentral JS SDK](https://github.com/ringcentral/ringcentral-js) instead.
+
 This is a simple Glip client implementation. It currently supports the following features:
 
 - [posts](test/posts.js)
